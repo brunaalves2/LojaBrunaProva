@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32E17EE8-1EC4-4EAA-9097-24160341BB22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LojaVinilJogo</RootNamespace>
+    <AssemblyName>LojaVinilJogo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.79\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.10.0.8\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteListarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteListarForm.Designer.cs">
+      <DependentUpon>ClienteListarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneroForm.Designer.cs">
+      <DependentUpon>GeneroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneroJogoListarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneroJogoListarForm.Designer.cs">
+      <DependentUpon>GeneroJogoListarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneroListarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneroListarForm.Designer.cs">
+      <DependentUpon>GeneroListarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneroJogoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneroJogoForm.Designer.cs">
+      <DependentUpon>GeneroJogoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JogoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JogoForm.Designer.cs">
+      <DependentUpon>JogoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JogoListarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JogoListarForm.Designer.cs">
+      <DependentUpon>JogoListarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioForm.Designer.cs">
+      <DependentUpon>UsuarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioListarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioListarForm.Designer.cs">
+      <DependentUpon>UsuarioListarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioLoginForm.Designer.cs">
+      <DependentUpon>UsuarioLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VinilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VinilForm.Designer.cs">
+      <DependentUpon>VinilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VinilListarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VinilListarForm.Designer.cs">
+      <DependentUpon>VinilListarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VitrineProdutoPesquisaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VitrineProdutoPesquisaForm.Designer.cs">
+      <DependentUpon>VitrineProdutoPesquisaForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteForm.resx">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteListarForm.resx">
+      <DependentUpon>ClienteListarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneroForm.resx">
+      <DependentUpon>GeneroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneroJogoForm.resx">
+      <DependentUpon>GeneroJogoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneroJogoListarForm.resx">
+      <DependentUpon>GeneroJogoListarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneroListarForm.resx">
+      <DependentUpon>GeneroListarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JogoForm.resx">
+      <DependentUpon>JogoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JogoListarForm.resx">
+      <DependentUpon>JogoListarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioForm.resx">
+      <DependentUpon>UsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioListarForm.resx">
+      <DependentUpon>UsuarioListarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioLoginForm.resx">
+      <DependentUpon>UsuarioLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VinilForm.resx">
+      <DependentUpon>VinilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VinilListarForm.resx">
+      <DependentUpon>VinilListarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VitrineProdutoPesquisaForm.resx">
+      <DependentUpon>VitrineProdutoPesquisaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\SGC_Negocio.Mapeamento.Cliente.datasource" />
+    <None Include="Properties\DataSources\SGC_Negocio.Mapeamento.Genero.datasource" />
+    <None Include="Properties\DataSources\SGC_Negocio.Mapeamento.Jogo.datasource" />
+    <None Include="Properties\DataSources\SGC_Negocio.Mapeamento.Usuario.datasource" />
+    <None Include="Properties\DataSources\SGC_Negocio.Mapeamento.Vinil.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SGC_Negocio\SGC_Negocio.csproj">
+      <Project>{396ed8a1-505a-4ab1-8b2e-032e148721ec}</Project>
+      <Name>SGC_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fotos\Jogos\" />
+    <Folder Include="Fotos\Vinis\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

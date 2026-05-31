@@ -1,0 +1,73 @@
+CREATE DATABASE BrunaLojaVinis;
+GO
+ 
+USE BrunaLojaVinis;
+GO
+ 
+CREATE TABLE Usuarios (
+    Id              INT             PRIMARY KEY IDENTITY(1,1),
+    Nome            VARCHAR(100)    NOT NULL,
+    Login           VARCHAR(50)     NOT NULL UNIQUE,
+    Senha           VARCHAR(50)     NOT NULL,
+    TipoUsuario     INT             NOT NULL,
+    DataCadastro    DATETIME        NOT NULL DEFAULT GETDATE(),
+    Ativo           BIT             NOT NULL DEFAULT 1
+);
+GO
+ 
+CREATE TABLE Clientes (
+    Id              INT             PRIMARY KEY IDENTITY(1,1),
+    CPF             VARCHAR(11)     NOT NULL UNIQUE,
+    NomeCompleto    VARCHAR(100)    NOT NULL,
+    DataNascimento  DATE            NOT NULL,
+    Sexo            CHAR(1)         NOT NULL,
+    Endereco        VARCHAR(200)    NOT NULL,
+    Telefone        VARCHAR(15)     NULL,
+    Email           VARCHAR(100)    NULL,
+    Ativo           BIT             NOT NULL DEFAULT 1
+);
+GO
+ 
+CREATE TABLE GeneroVinil (
+    Id              INT             PRIMARY KEY IDENTITY(1,1),
+    Nome            VARCHAR(50)     NOT NULL,
+    Ativo           BIT             NOT NULL DEFAULT 1
+);
+GO
+ 
+CREATE TABLE GeneroJogo (
+    Id              INT             PRIMARY KEY IDENTITY(1,1),
+    Nome            VARCHAR(50)     NOT NULL,
+    Ativo           BIT             NOT NULL DEFAULT 1
+);
+GO
+ 
+CREATE TABLE Produto (
+    Id              INT             PRIMARY KEY IDENTITY(1,1),
+    Nome            VARCHAR(100)    NOT NULL,
+    Descricao       VARCHAR(500)    NULL,
+    Ano             INT             NOT NULL,
+    Quantidade      INT             NOT NULL DEFAULT 0,
+    ValorUnitario   DECIMAL(10,2)   NOT NULL,
+    Foto            VARCHAR(300)    NULL,
+    Ativo           BIT             NOT NULL DEFAULT 1
+);
+GO
+ 
+CREATE TABLE Vinil (
+    Id              INT             PRIMARY KEY IDENTITY(1,1),
+    IDProduto       INT             NOT NULL FOREIGN KEY REFERENCES Produto(Id),
+    Artista         VARCHAR(200)    NOT NULL,
+    Gravadora       VARCHAR(200)    NOT NULL,
+    IDGeneroVinil   INT             NOT NULL FOREIGN KEY REFERENCES GeneroVinil(Id)
+);
+GO
+ 
+CREATE TABLE Jogo (
+    Id              INT             PRIMARY KEY IDENTITY(1,1),
+    IDProduto       INT             NOT NULL FOREIGN KEY REFERENCES Produto(Id),
+    Estudio         VARCHAR(100)    NOT NULL,
+    Plataforma      VARCHAR(100)    NOT NULL,
+    IDGeneroJogo    INT             NOT NULL FOREIGN KEY REFERENCES GeneroJogo(Id)
+);
+GO
